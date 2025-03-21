@@ -28,6 +28,10 @@
   <a href="">
     <img src="./imgs/teaser.png" alt="teaser" width="100%">
   </a>
+
+  <a href="">
+    <img src="./imgs/4DGSSLAM.gif" alt="teaser" width="100%">
+  </a>
 </p>
 
 
