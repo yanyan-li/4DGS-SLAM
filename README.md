@@ -40,19 +40,69 @@
 
 
 # 1.Installation
+ 
+ 
+```
+git clone https://github.com/yanyan-li/4DGS-SLAM.git
+cd 4DGS-SLAM
+```
+
+Setup the environment.
+```
+conda create -n 4dgs-slam python=3.8
+conda activate 4dgs-slam
+# CUDA 11.7
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
+pip install -r requirements.txt
+```
+
+The simple-knn and diff-gaussian-rasterization libraries use the ones provided by MonoGS.
+```
+pip install submodules/simple-knn
+pip install submodules/diff-gaussian-rasterization
+```
+
+Use torch-batch-svd speed up (Optional)
+```
+git clone https://github.com/KinglittleQ/torch-batch-svd
+cd torch-batch-svd
+python setup.py install
+```
+
+# 2.Pretrained Models
+
+Download YOLOv9e-seg
+```bash
+cd 4DGS-SLAM/pretrained
+wget https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov9e-seg.pt
+```
+Or download it directly from https://docs.ultralytics.com/models/yolov9/
+
+Download RAFT
+
+The model **raft-things.pth** used in this system can be obtained directly from https://drive.google.com/drive/folders/1sWDsfuZ3Up38EUQt7-JDTT1HcGHuJgvT
 
 
-# 2.Testing
-
-
-## Downloading Datasets
+# 3.Datasets
 
 ### TUM-RGBD dataset
+```bash
+bash scripts/download_tum_dynamic.sh
+```
 
 ### BONN dataset
 
+# 4.Testing
 
-# 3.Training  
+ Dynamic rendering
+```bash
+python slam.py --config configs/rgbd/tum/fr3_sitting.yaml --eval --dynamic
+```
+### Adjust the frequency of image saving
+```bash
+python slam.py --config configs/rgbd/tum/fr3_sitting.yaml --eval --dynamic --interval 50
+```
+
 
 
 # 4.Acknowledgement
@@ -60,16 +110,24 @@ This work incorporates many open-source codes. We extend our gratitude to the au
 - [MonoGS](https://github.com/muskie82/MonoGS)
 - [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting)
 - [GeoGaussian](https://github.com/yanyan-li/GeoGaussian)
-- [SIBR_viewers](https://gitlab.inria.fr/sibr/sibr_core)
-- [Tiny Gaussian Splatting Viewer](https://github.com/limacv/GaussianSplattingViewer)
+- [SC-GS](https://github.com/CVMI-Lab/SC-GS)
 - [Open3D](https://github.com/isl-org/Open3D)
 
 
 # 5.License
 
+
+
 # 6.Citation
-
-
+If you find this code/work useful for your own research, please consider citing:
+```
+@article{li20254d,
+  title={4{D} {G}aussian {S}platting {SLAM}},
+  author={Li, Yanyan and Fang, Youxu and Zhu, Zunjie and Li, Kunyi and Ding, Yong and Tombari, Federico},
+  journal={arXiv preprint arXiv:2503.16710},
+  year={2025}
+}
+```
 
 
 
