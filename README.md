@@ -94,18 +94,18 @@ bash scripts/download_tum_dynamic.sh
 
 # 4.Testing
 
- Dynamic rendering
+### Dynamic rendering
 ```bash
 python slam.py --config configs/rgbd/tum/fr3_sitting.yaml --eval --dynamic
 ```
-### Adjust the frequency of image saving
+### Adjust the frequency for image saving
 ```bash
 python slam.py --config configs/rgbd/tum/fr3_sitting.yaml --eval --dynamic --interval 50
 ```
 
 
 
-# 4.Acknowledgement
+# 5.Acknowledgement
 This work incorporates many open-source codes. We extend our gratitude to the authors of the software.
 - [MonoGS](https://github.com/muskie82/MonoGS)
 - [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting)
@@ -114,11 +114,11 @@ This work incorporates many open-source codes. We extend our gratitude to the au
 - [Open3D](https://github.com/isl-org/Open3D)
 
 
-# 5.License
+# 6.License
 
 
 
-# 6.Citation
+# 7.Citation
 If you find this code/work useful for your own research, please consider citing:
 ```
 @article{li20254d,
