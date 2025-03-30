@@ -21,7 +21,7 @@
 
 
 [comment]: <> (  <h2 align="center">PAPER</h2>)
-  <h3 align="center"><a href="https://arxiv.org/pdf/2503.16710">Paper</a> | <a href="https://youtu.be/">Video</a> | <a href="https:">Project Page</a></h3>
+  <h3 align="center"><a href="https://arxiv.org/pdf/2503.16710">Paper</a> | <a href="https://yanyan-li.github.io/project/gs/4dgsslam.html">Project Page</a></h3>
   <div align="center"></div>
 
 <p align="center">
