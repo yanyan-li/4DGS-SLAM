@@ -8,6 +8,7 @@ diff_rasterization/diff_rast.egg-info
 diff_rasterization/dist
 
 pretrained/yolov9e-seg.pt
+pretrained/raft-things.pth
 cameras.json
 *.ply
 *.mp4
