@@ -71,14 +71,14 @@ python setup.py install
 
 # 2.Pretrained Models
 
-Download YOLOv9e-seg
+Download **YOLOv9e-seg**
 ```bash
 cd 4DGS-SLAM/pretrained
 wget https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov9e-seg.pt
 ```
 Or download it directly from https://docs.ultralytics.com/models/yolov9/
 
-Download RAFT
+Download **RAFT**
 
 The model **raft-things.pth** used in this system can be obtained directly from https://drive.google.com/drive/folders/1sWDsfuZ3Up38EUQt7-JDTT1HcGHuJgvT
 
@@ -86,11 +86,12 @@ The model **raft-things.pth** used in this system can be obtained directly from 
 # 3.Datasets
 
 ### TUM-RGBD dataset
+
+Download the sequence using the following command:
+
 ```bash
 bash scripts/download_tum_dynamic.sh
 ```
-
-### BONN dataset
 
 # 4.Testing
 
@@ -114,11 +115,10 @@ This work incorporates many open-source codes. We extend our gratitude to the au
 - [Open3D](https://github.com/isl-org/Open3D)
 
 
-# 6.License
 
 
 
-# 7.Citation
+# 6.Citation
 If you find this code/work useful for your own research, please consider citing:
 ```
 @article{li20254d,
