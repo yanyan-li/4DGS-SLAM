@@ -1,0 +1,40 @@
+inherit_from: "configs/rgbd/tum/base_config.yaml"
+
+Dataset:
+  dataset_path: "datasets/tum/rgbd_dataset_freiburg3_sitting_static"
+  bound: [[-8.0, -2.5, -5.0],[7.0, 8.5, 5.0]]  # Deformation Net aabb
+  Calibration:
+    fx: 535.4
+    fy: 539.2
+    cx: 320.1
+    cy: 247.6
+    k1: 0.0
+    k2: 0.0
+    p1: 0.0
+    p2: 0.0
+    k3: 0.0
+    distorted: False
+    width: 640
+    height: 480
+    depth_scale: 5000.0
+    
+Training:
+  single_thread: True
+  #mapping_itr_num: 150   # 150
+  plane_tv_weight: 0.0002
+  time_smoothness_weight: 0.001
+  l1_time_planes:  0.0001
+  
+opt_params:
+  grid_lr_init: 0.0009 #0.0016
+  deformation_lr_init: 0.00022
+
+ModelHiddenParams:
+  net_width: 64
+  multires: [1, 2, 4, 8]
+  kplanes_config:
+    grid_dimensions: 2
+    input_coordinate_dim: 4
+    output_coordinate_dim: 32
+    resolution: [64, 64, 64, 345]  # [64,64,64]: resolution of spatial grid. 345: resolution of temporal grid, better to be half length of dynamic frames
+           

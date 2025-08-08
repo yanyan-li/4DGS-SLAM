@@ -1,0 +1,28 @@
+opencv-python==4.8.1.78
+munch
+trimesh
+evo==1.11.0
+open3d==0.17.0
+torchmetrics
+imgviz
+PyOpenGL
+glfw
+PyGLM
+wandb
+lpips
+rich
+ruff
+tqdm
+matplotlib==3.5.3
+argparse
+ultralytics
+git+https://github.com/facebookresearch/pytorch3d.git  # https://github.com/facebookresearch/pytorch3d/releases
+
+
+##speed up
+# git clone https://github.com/KinglittleQ/torch-batch-svd
+# cd torch-batch-svd
+# python setup.py install
+
+## yolov8x-seg.pt
+# https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8x-seg.pt

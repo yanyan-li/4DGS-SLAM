@@ -1,0 +1,29 @@
+inherit_from: "configs/rgbd/cofusion/base_config.yaml"
+
+Dataset:
+  dataset_path: "datasets/cofusion/car4-full"
+  Calibration:
+    fx: 564.3
+    fy: 564.3
+    cx: 480
+    cy: 270
+    k1: 0.0
+    k2: 0.0
+    p1: 0.0
+    p2: 0.0
+    k3: 0.0
+    distorted: False
+    width: 960
+    height: 540
+    depth_scale: 1.
+    start: 0
+    end: -1
+    
+Training:
+  single_thread: True
+  #mapping_itr_num: 150   # 150
+  dystart: 73
+  flow_loss: 5
+  flow_loss_fine: 3
+  delta: 4
+  

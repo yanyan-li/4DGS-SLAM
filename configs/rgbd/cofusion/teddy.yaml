@@ -1,0 +1,24 @@
+inherit_from: "configs/rgbd/cofusion/base_config.yaml"
+
+Dataset:
+  dataset_path: "datasets/cofusion/teddy"
+  Calibration:
+    fx: 528
+    fy: 528
+    cx: 320
+    cy: 240
+    k1: 0.0
+    k2: 0.0
+    p1: 0.0
+    p2: 0.0
+    k3: 0.0
+    distorted: False
+    width: 640
+    height: 480
+    depth_scale: 5000
+  seg_teddy: True
+    
+Training:
+  single_thread: True
+  #mapping_itr_num: 100   # 150
+  dystart: 90
